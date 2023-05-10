@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemHome"
+        android:icon="@drawable/baseline_home_24"
+        android:title="home" />
+    <item
+        android:id="@+id/itemSaveKost"
+        android:icon="@drawable/baseline_add_home_24"
+        android:title="save kost" />
+    <item
+        android:id="@+id/itemKostSaya"
+        android:icon="@drawable/baseline_home_work_24"
+        android:title="kost saya" />
+    <item
+        android:id="@+id/itemRiwayatKost"
+        android:icon="@drawable/baseline_history_24"
+        android:title="riwayat kost" />
+    <item
+        android:id="@+id/itemProfile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="profile" />
+</menu>

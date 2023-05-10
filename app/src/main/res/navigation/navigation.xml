@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.example.a160420079_utsanmp.view.HomeFragment"
+        android:label="UbayaKost"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/actionKostDetailFromHome"
+            app:destination="@id/kostDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kostDetailFragment"
+        android:name="com.example.a160420079_utsanmp.view.KostDetailFragment"
+        android:label="Kost Detail"
+        tools:layout="@layout/fragment_kost_detail">
+        <action
+            android:id="@+id/actionReviewFromDetail"
+            app:destination="@id/reviewFragment" />
+        <argument
+            android:name="kostDetail"
+            app:argType="integer" />
+        <action
+            android:id="@+id/actionBookFromDetail"
+            app:destination="@id/bookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemKostSaya"
+        android:name="com.example.a160420079_utsanmp.view.KostSayaFragment"
+        android:label="Kost Saya"
+        tools:layout="@layout/fragment_kost_saya">
+        <action
+            android:id="@+id/actionKostDetailFromKostSaya"
+            app:destination="@id/kostDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.example.a160420079_utsanmp.view.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/actionRiwayatTransaksiFromProfile"
+            app:destination="@id/riwayatTransaksiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.example.a160420079_utsanmp.view.ReviewFragment"
+        android:label="Review Fragment"
+        tools:layout="@layout/fragment_review" >
+        <argument
+            android:name="kostid"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemRiwayatKost"
+        android:name="com.example.a160420079_utsanmp.view.RiwayatKostFragment"
+        android:label="Riwayat Kost"
+        tools:layout="@layout/fragment_riwayat_kost" />
+    <fragment
+        android:id="@+id/riwayatTransaksiFragment"
+        android:name="com.example.a160420079_utsanmp.view.RiwayatTransaksiFragment"
+        android:label="Riwayat Transaksi"
+        tools:layout="@layout/fragment_riwayat_transaksi" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemSaveKost"
+        android:name="com.example.a160420079_utsanmp.view.SaveKostFragment"
+        android:label="Save Kost"
+        tools:layout="@layout/fragment_save_kost">
+        <action
+            android:id="@+id/actionKostDetailFromSave"
+            app:destination="@id/kostDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.example.a160420079_utsanmp.view.BookFragment"
+        android:label="Book Fragment"
+        tools:layout="@layout/fragment_book">
+        <action
+            android:id="@+id/actionHomeFromBook"
+            app:destination="@id/itemHome" />
+    </fragment>
+</navigation>
