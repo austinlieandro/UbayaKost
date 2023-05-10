@@ -57,7 +57,7 @@ class KostDetailFragment : Fragment() {
                 txtNamaKostDetail?.text = kostLD.nameKost
                 txtLocationDetail?.text = kostLD.alamat
                 txtContentDescDetail?.text = kostLD.description
-                txtPriceDetail?.text = "Rp " + kostLD.price.toString()
+                txtPriceDetail?.text = "Rp. " + kostLD.price.toString()
                 imgKostDetail?.loadImage(kostLD.imgUrl)
 
 

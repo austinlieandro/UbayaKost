@@ -31,8 +31,8 @@ class RiwayatTransaksiListAdapter(private val riwayatTransaksi: ArrayList<Riwaya
         val imgKostTransaksiItem = holder.view.findViewById<ImageView>(R.id.imgKostTransaksiItem)
 
         txtTransaksiKostItem.text = riwayatTransaksi[position].nameKost
-        txtHargaTransaksiItem.text = riwayatTransaksi[position].price.toString()
-        txtStatusTransaksiItem.text = riwayatTransaksi[position].statusPembayaran
+        txtHargaTransaksiItem.text = "Rp. " + riwayatTransaksi[position].price.toString()
+        txtStatusTransaksiItem.text = "Status Pembayaran : " + riwayatTransaksi[position].statusPembayaran
         imgKostTransaksiItem.loadImage(riwayatTransaksi[position].imgUrl)
     }
 
